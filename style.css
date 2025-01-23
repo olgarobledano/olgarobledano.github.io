@@ -1,0 +1,442 @@
+body {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #999280;
+    background-color: #f5f2ed;
+    margin-left: 200px;
+    margin-right: 200px;
+    padding: 0;
+    cursor: url('cursor7.png'), pointer;
+}
+
+h1 {
+    font-size: 70px;
+    text-align: center;
+    width: 75%;
+    letter-spacing: 2px;
+    margin: 0px;
+}
+
+h2 {
+    font-size: 25px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 2px;
+    cursor: url('cursor9.png'), auto;
+}
+
+h2:hover {
+    transform: scale(1.5);
+    transition: 0.5s;
+    text-shadow: #4a4135 2px 5px 12px;
+}
+
+h3{
+    font-size: 22px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 2px;
+    cursor: url('cursor9.png'), auto;
+}
+
+h3:hover{
+    transform: scale(1.2);
+    transform-origin: left;
+    transition: 0.5s;
+    text-shadow: #968e83 2px 5px 12px;
+}
+
+h4{
+    font-size: 18px;
+    line-height: 1.6;
+    letter-spacing: 2px;
+    margin-top: 50px;
+}
+
+
+p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/*CANIMACIONES*/
+
+.visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.contenedor-cita,
+.contenedor-img,
+.contenedor-vid {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.contenedor-line .line1,
+.contenedor-line .line2,
+.contenedor-line .line3 {
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+.contenedor-line .line1.visible,
+.contenedor-line .line2.visible,
+.contenedor-line .line3.visible {
+    width: 100%;
+}
+
+.contenedor-img img {
+    transform: scale(1);
+    transition: transform 1.5s ease-in-out, opacity 1.5s ease-in-out;
+}
+
+.contenedor-img img.visible {
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+
+
+/*CONTENEDORES*/
+
+.contenedor{
+    margin: 20px;
+    padding: 5px;
+    width: auto;
+    background-color:rgb(215, 236, 236);
+    
+}
+
+.contenedor-p{
+    border-style: solid;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    border-color: #8f8a7e;
+    background-color: #f5f2ed;
+    padding:5px 20px;
+    margin: 20px;
+    opacity: 0;
+    transform: translateX(100px); 
+    transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.contenedor-pp{
+    border-style: solid;
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    border-color: #8f8a7e;
+    background-color: #f5f2ed;
+    padding:5px 20px;
+    margin: 20px;
+    opacity: 0;
+    transform: scale(0.8); 
+    transition: transform 3s ease-out, opacity 1s ease-out;
+}
+
+.contenedor-pp.visible {
+    transform: translateX(0); 
+    opacity: 1;
+}
+
+.contenedor-p.visible {
+    transform: scale(1); 
+    opacity: 1;
+}
+
+.contenedor-h2{
+    border-style: solid;
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    border-color:#8f8a7e;
+    background-color: #b5b1a6;
+    color: #f5f2ed;
+    padding:5px 20px;
+    margin: 20px;
+    line-height: auto;
+    margin-top: 15px;
+    text-align: center;
+}
+
+
+
+/*LINEA*/
+
+.contenedor-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.line1,
+.line2,
+.line3 {
+    width: 0;
+    height: 10px;
+    background-color: #8f8a7e;
+    transition: width 1s ease-out, opacity 1s ease-in-out;
+    transform-origin: center;
+    opacity: 0;
+}
+
+.line1.visible,
+.line2.visible,
+.line3.visible {
+    width: 100%;
+    opacity: 1;
+}
+
+
+/*TEXTO DINAMICO*/
+
+#texto-dinamico {
+    font-size: 60px;
+    text-align: left;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+#palabra-dinamica {
+    color: #615b53;
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    font-weight: bold;
+    transition: opacity 0.2s ease-in-out;
+}
+
+/*FRASE CITA*/
+
+.contenedor-cita {
+    background-color: #7f9b98;
+    color: #f5f2ed;
+    font-family: Georgia, serif;
+    font-size: 20px;
+    font-style: italic;
+    text-align: center;
+    border-bottom-style: solid;
+    border-width: 20px;
+    border-color: #f5f2ed;
+    padding: 15px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 250px;
+    margin-right: 20px;
+    border-top-left-radius: 40px;
+    letter-spacing: 1;
+    transition: letter-spacing 0.5s ease;
+}
+
+.contenedor-cita:hover {
+    animation: bounce-spacing 3s ease;
+}
+
+@keyframes bounce-spacing {
+    0% { letter-spacing: 1; }
+    50% { letter-spacing: 2px; }
+    100% { letter-spacing: 1; }
+}
+
+.cita1,
+.cita3,
+.cita5,
+.cita7 {
+    transform: translateX(-50%); 
+    opacity: 0.2; 
+    transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.cita1.visible,
+.cita3.visible,
+.cita5.visible,
+.cita7.visible, {
+    transform: translateX(0);
+    opacity: 1; 
+}
+
+
+.contenedor-cita2{
+    margin: 20px;
+    padding: 50px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(55, 52, 44);
+    z-index: 1;
+    font-style: italic;
+    font-family: 'Courier New', Courier, monospace;
+    background-image: url("back1.jpeg");
+    background-size: cover; 
+    background-repeat: no-repeat;
+   }
+
+.contenedor-cita3{
+    margin-left: 50px; 
+    margin-right: 50px; 
+    font-size: 20px;
+    font-style: italic;
+    align-items: center;
+    padding: 5px;
+}
+
+
+
+
+
+
+/*IMAGENES*/
+
+.contenedor-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    opacity: 100;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    overflow: hidden;
+    padding: 20px;
+}
+
+
+.contenedor-img div {
+    width:100%;
+    overflow: hidden;
+}
+
+.contenedor-img img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+    
+}
+
+.contenedor-img img:hover {
+    transform: scale(2);
+    transition-duration: 3s;
+}
+
+/*VIDEO*/
+
+.contenedor-vid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    padding: 20px;
+}
+
+.contenedor-vid video{
+    height: auto;
+    transition:ease-out 2s;
+    border-top-left-radius: 50px;
+    border-bottom-style: solid;
+    border-color: rgb(54, 194, 204);
+    border-width: 20px;
+    
+}
+
+.contenedor-vid div {
+    width:100%;
+    overflow: hidden;
+}
+
+.contenedor-vid.video-visible{
+    opacity: 1;
+}
+
+.contenedor-vid2{
+    opacity: 0.9;
+    padding: 20px;
+}
+
+.contenedor-vid2 div {
+    width:100%;
+    overflow: hidden;
+}
+
+video{
+    width: 100%;
+    height: 100%; 
+    transition: transform 0.5s ease;
+    object-fit: cover
+}
+
+/*
+.contenedor-vid:hover video {
+    transform: scale(150%);
+}
+    */
+
+.video-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+    color: #f5f2ed;
+    flex-direction: column;
+}
+
+/*GIF*/
+
+.contenedor-gif{
+    text-align:center;
+    margin: 20px 0;
+    transition: opacity 5s ease, transform 5s ease;
+}
+
+.contenedor-gif img {
+    width: 20%;
+}
+
+/*EFECTOS*/ 
+
+
+.efecto1 img.visible,
+.efecto2 img.visible,
+.efecto3 img.visible
+ {
+    transform: scale(2.5);
+    transition-duration: 1s;
+    transition-timing-function: 2s;
+    opacity: 1
+}
+
+
+
+.efecto5 img.visible,
+.efecto6 img.visible,
+.efecto7 img.visible
+ {
+    transform: translateX(5);
+    transition-duration: 2s;
+    transition-timing-function: 3s;
+    opacity: 1;
+}
+
+.efecto-gif {
+    opacity: 0;
+    transform: scale(0.8); 
+    transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+
+.efecto-gif.visible {
+    opacity: 1;
+    transform: scale(1); 
+}
+
